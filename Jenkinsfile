@@ -12,6 +12,7 @@ pipeline {
             steps {
                
                 sh 'touch deneme.txt'
+                sh 'ls -ll'
           
             }
         }

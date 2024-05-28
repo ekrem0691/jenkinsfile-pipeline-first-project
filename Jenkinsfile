@@ -3,18 +3,29 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Compiling the java source code'
-                sh 'javac Hello.java'
+                echo "Clarusway_Way to Reinvent Yourself"
+                sh 'echo using shell within Jenkinsfile'
+                echo 'not using shell in the Jenkinsfile'
             }
         }
-        stage('run') {
+        stage('test') {
             steps {
-                echo 'Running the compiled java code.'
-                sh 'java Hello'
+               
+                sh 'touch deneme.txt'
+          
+            }
+        }
+        stage('deploy') {
+            steps {
+               
+                sh 'echo  "hello" > deneme2.txt '
+          
             }
         }
     }
 }
+
+
 
 
 
@@ -23,24 +34,17 @@ pipeline {
 //     stages {
 //         stage('build') {
 //             steps {
-//                 echo "Clarusway_Way to Reinvent Yourself"
-//                 sh 'echo using shell within Jenkinsfile'
-//                 echo 'not using shell in the Jenkinsfile'
+//                 echo 'Compiling the java source code'
+//                 sh 'javac Hello.java'
 //             }
 //         }
-//         stage('test') {
+//         stage('run') {
 //             steps {
-               
-//                 sh 'touch deneme.txt'
-          
-//             }
-//         }
-//         stage('deploy') {
-//             steps {
-               
-//                 sh 'echo  "hello" > deneme2.txt '
-          
+//                 echo 'Running the compiled java code.'
+//                 sh 'java Hello'
 //             }
 //         }
 //     }
 // }
+
+
